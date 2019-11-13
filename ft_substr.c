@@ -6,7 +6,7 @@
 /*   By: darbib <darbib@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 10:48:17 by darbib            #+#    #+#             */
-/*   Updated: 2019/11/07 16:53:20 by darbib           ###   ########.fr       */
+/*   Updated: 2019/11/12 11:29:19 by darbib           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*sub_s;
 	size_t	i;
 
-	if (!s || start > ft_strlen(s) - 1)
+	if (!s || start > ft_strlen(s))
 		return (NULL);
-	if (!(sub_s = ft_calloc(sizeof(char), len + 1)))
+	if (!(sub_s = ft_calloc(len + 1, sizeof(char))))
 		return (NULL);
 	i = 0;
 	while (s[start + i] && i < len)
